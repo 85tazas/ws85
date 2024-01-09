@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>85 TAZAS - SPECIALTY COFFEE MADRID</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Crimson Pro', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D8C76F;
+        }
+
+        header,
+        nav,
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .menu-imagenes {
+            width: 100%;
+            margin: auto;
+        }
+
+        .menu-imagen {
+            display: none;
+        }
+
+        .redes-sociales {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redes-sociales img {
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+            /* Añadido para centrar títulos */
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            /* Espaciado opcional entre el título y el contenido */
+        }
+
+        section#ubicacion {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        section#ubicacion .mapa {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        section#ubicacion .texto {
+            flex: 1;
+            max-width: 45%;
+            text-align: center;
+        }
+
+        section#ubicacion .horario {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .boutique-imagenes {
+            width: 80%;
+            margin: auto;
+        }
+
+        .boutique-imagen {
+            position: relative;
+        }
+
+        .texto-imagen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .texto-imagen h3 {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .texto-imagen p {
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#boutique">Boutique</a> |
+        <a href="#ubicacion">Ubicación</a> |
+        <a href="#contacto">Contacto</a> |
+        <a href="#suscripciones">Suscripciones</a> |
+        <a href="nuestro-cafe.html">Nuestro Café</a>
+    </nav>
+
+    <header>
+        <h3>85 TAZAS - SPECIALTY COFFEE MADRID</h3>
+        <p>Garantizamos origen: Finca Buenos Aires, La Vega, Cundinamarca,Colombia</p>
+        <p>Especie: Arabica - Procesos: Lavado, Red Honey y Black Honey</p>
+    </heaer>
+
+    <section id="boutique">
+        <h2>NUESTRA BOUTIQUE</h2>
+        <div class="boutique-imagenes">
+            <div class="boutique-imagen">
+                <img src="imagen1.jpg" alt="Imagen 1">
+                <div class="texto-imagen">
+                    <h3><b>SOMOS PRODUCTORES</b></h3>
+                    <p>Nuestros 40 años de experiencia cultivando café colombiano de alta calidad se reflejan en cada
+                        grano.</p>
+                </div>
+            </div>
+            <div class="boutique-imagen">
+                <img src="imagen2.jpg" alt="Imagen 2">
+                <div class="texto-imagen">
+                    <h3><b>TOSTADORES</b></h3>
+                    <p>Como tostadores expertos, garantizamos que cada grano de café alcance su sabor óptimo antes de
+                        llegar a tu taza.</p>
+                </div>
+            </div>
+            <div class="boutique-imagen">
+                <img src="imagen3.jpg" alt="Imagen 3">
+                <div class="texto-imagen">
+                    <h3><b>Y BARISTAS</b></h3>
+                    <p>Nuestros baristas son apasionados por crear experiencias únicas. Descubre la magia en cada
+                        sorbo.</p>
+                </div>
+            </div>
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+        <!-- Scripts del Carrusel (slick) -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.boutique-imagenes').slick({
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear'
+                });
+            });
+        </script>
+    </section>
+    <div class="redes-sociales">
+        <a href="https://www.instagram.com/85tazas" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.pinterest.es/navarrobaronacoffeenfarming/" target="_blank">
+            <img src="pinterest.png" alt="Pinterest">
+        </a>
+    </div>
+
+    <section id="ubicacion">
+        <div class="mapa">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4876.460977280497!2d-3.6953586852538824!3d40.42155267835782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228ddac06d411%3A0xa072f2248d7d67b7!2sCalle%20Puerto%20Rico%2037%2C%2028016%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1641915092567!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="texto">
+            <p><b>Encuéntranos en el corazón de Madrid. <br>Te esperamos!!<br>Calle Puerto Rico 37 <br> Chamartín,
+                    Madrid, España</b></p>
+            <div class="horario">
+                <p>Horario de atención:</p>
+                <p>Lunes a Viernes: 8 am - 6 pm</p>
+                <p>Sábado: 9 am - 3 pm</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Preguntas o reservas? ¡Contáctanos!</p>
+        <!-- Agregar formulario de contacto -->
+    </section>
+
+    <section id="suscripciones">
+        <h2>Suscripciones</h2>
+        <form action="suscribir.php" method="post">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit" name="subscribe">Suscribirse</button>
+            <label for="captcha">Por favor escribe el texto que ves en la imagen:</label>
+            <input type="text" id="captcha" name="captcha" required>
+            <img src="captcha.php" alt="CAPTCHA" id="captcha-image">
+            <button type="button"
+                onclick="document.getElementById('captcha-image').src='captcha.php?' + Math.random();"
+                id="captcha-refresh">Refrescar CAPTCHA</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 85 Tazas - Cafetería Especialidad Madrid (2023)</p>
+    </footer>
+
+</body>
+
+</html>
