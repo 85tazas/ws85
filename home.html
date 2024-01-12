@@ -28,20 +28,32 @@
         }
 
         header {
-            background-image: url (https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67170561.JPG); 
+            position: relative;
+            background-image: url('https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67170561.JPG');
 	    /* Reemplaza 'path-to-your-image.jpg' con la ruta de tu imagen de fondo */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 300px; /* Ajusta la altura según tu necesidad */
+            height: 800px; /* Ajusta la altura según tu necesidad */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
         }
 
         nav {
-            margin-top: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Ajusta el fondo del nav según lo desees */
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 1; /* Asegura que el nav esté sobre la imagen de fondo */
+        }
+        
+        h3, p {
+            margin-bottom: 20px; /* Espaciado opcional entre el h3 y el párrafo */
         }
 
         nav a {
@@ -167,9 +179,6 @@
 
 <body>
     <header>
-        <div>
-            <img src="imagenventanacafe.jpg" alt="Logo" style="width: 50px;">
-        </div>
         <nav>
             <a href="#boutique">Boutique</a> |
             <a href="#ubicacion">Ubicación</a> |
@@ -278,3 +287,4 @@
 
 </body>
 </html>
+
