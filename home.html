@@ -16,33 +16,33 @@
             margin: 0;
             padding: 0;
             background-color: #D8C76F;
+            color: #000;
         }
 
         header,
         nav,
         footer {
             background-color: #333;
-            color: #000;
+            color: #fff;
             text-align: center;
             padding: 1em 0;
         }
 
         header {
             position: relative;
-              background-image: url('https://raw.githubusercontent.com/85tazas/ws85/main/images/home/homefront7.jpg');
-              /* Reemplaza 'path-to-your-image.jpg' con la ruta de tu imagen de fondo */
-              background-size: 100% 100%;
-              background-position: center;
-              background-repeat: no-repeat;
-              height: 100vh; /* Ajusta la altura según tu necesidad */
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: flex-end;
-              color: #000;
-              text-align: center;
-              padding: 20px;
-              box-sizing: border-box;
+            background-image: url('https://raw.githubusercontent.com/85tazas/ws85/main/images/home/home10.jpg');
+            background-size: 80% 75%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: #000; /* Cambiado a negro para mejorar contraste */
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         nav {
@@ -50,35 +50,31 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Ajusta el fondo del nav según lo desees */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
             box-sizing: border-box;
-            z-index: 1; /* Asegura que el nav esté sobre la imagen de fondo */
-        }
-        
-        /* Estilo para el h3 en el header */
-        header h3 {
-            margin: 0; /* Elimina el margen predeterminado */
-        }
-        
-        /* Estilo para el párrafo en el header */
-        header p {
-            margin: 2px 0; /* Añade espacio entre el h3 y el párrafo */
+            z-index: 1;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.3s; /* Agregado efecto de transición al color del enlace */
         }
 
-        .menu-imagenes {
-            width: 100%;
-            margin: auto;
+        nav a:hover {
+            color: #D8C76F; /* Cambiado a amarillo para resaltar */
         }
 
-        .menu-imagen {
-            display: none;
+        /* Estilo para el h3 en el header */
+        header h3 {
+            margin: 0;
+        }
+
+        /* Estilo para el párrafo en el header */
+        header p {
+            margin: 2px 0;
         }
 
         .redes-sociales {
@@ -93,11 +89,11 @@
 
         section {
             padding: 2em;
-            text-align: center; /* Añadido para centrar títulos */
+            text-align: center;
         }
 
         section h2 {
-            margin-bottom: 20px; /* Espaciado opcional entre el título y el contenido */
+            margin-bottom: 20px;
         }
 
         section#ubicacion {
@@ -146,7 +142,7 @@
         }
 
         button {
-            background-color: #55;
+            background-color: #555;
             color: #fff;
             padding: 10px;
             border: none;
@@ -157,13 +153,18 @@
             background-color: #333;
         }
 
-        .boutique-imagenes {
-            width: 80%;
-            margin: auto;
-        }
 
         .boutique-imagen {
             position: relative;
+            overflow: hidden;
+            display: flex; /* Usa flexbox para centrar los elemenos hijos (imágenes y texto) */
+            justify-content: center; /* Centra horizontalmente los elementos hijos */
+            align-items: center; /* Centra verticalmente los elementos hijos */
+        }
+        
+        .boutique-imagen img {
+            width: 30%; /* Hace que las imágenes ocupen el 10% del ancho del contenedor */
+            height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
         }
 
         .texto-imagen {
@@ -173,19 +174,34 @@
             transform: translate(-50%, -50%);
             color: #fff;
             text-align: center;
+            width: 80%;
         }
-
+        
+        
+        .boutique-imagenes {
+            width: 80%;
+            margin: auto;
+        }
         .texto-imagen h3 {
             font-weight: bold;
             font-size: 1.5em;
             margin-bottom: 10px;
         }
-
+        
         .texto-imagen p {
             font-size: 1em;
         }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
     </style>
 </head>
+
+<!-- Resto del código HTML sigue igual -->
 
 <body>
     <header>
@@ -200,6 +216,21 @@
         <p>Garantizamos origen: Finca Buenos Aires, La Vega, Cundinamarca,Colombia</p>
     </header>
 
+    <section id="ubicacion">
+        <div class="mapa">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4876.460977280497!2d-3.6953586852538824!3d40.42155267835782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228ddac06d411%3A0xa072f2248d7d67b7!2sCalle%20Puerto%20Rico%2037%2C%2028016%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1641915092567!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="texto">
+            <p><b>Encuéntranos en el corazón de Madrid. <br>Te esperamos en la<br>Calle Puerto Rico 37 <br> Chamartín,
+                    Madrid, España</b></p>
+            <div class="horario">
+                <p>Horario de atención:</p>
+                <p>Lunes a Viernes: 8 am - 6 pm</p>
+                <p>Sábado: 9 am - 3 pm</p>
+            </div>
+        </div>
+    </section>
+    
     <section id="boutique">
         <h2>NUESTRA BOUTIQUE</h2>
         <div class="boutique-imagenes">
@@ -255,20 +286,7 @@
         </a>
     </div>
 
-    <section id="ubicacion">
-        <div class="mapa">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4876.460977280497!2d-3.6953586852538824!3d40.42155267835782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228ddac06d411%3A0xa072f2248d7d67b7!2sCalle%20Puerto%20Rico%2037%2C%2028016%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1641915092567!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="texto">
-            <p><b>Encuéntranos en el corazón de Madrid. <br>Te esperamos!!<br>Calle Puerto Rico 37 <br> Chamartín,
-                    Madrid, España</b></p>
-            <div class="horario">
-                <p>Horario de atención:</p>
-                <p>Lunes a Viernes: 8 am - 6 pm</p>
-                <p>Sábado: 9 am - 3 pm</p>
-            </div>
-        </div>
-    </section>
+
 
     <section id="contacto">
         <h2>Contacto</h2>
@@ -296,4 +314,4 @@
     </footer>
 
 </body>
-</html>5
+</html>t
