@@ -1,27 +1,18 @@
-<!-- boutique.html -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <!-- Mueve los enlaces de los estilos al head del nuevo archivo -->
-	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<title>85 TAZAS - SPECIALTY COFFEE MADRID</title>
-    	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    	<link rel="stylesheet" type="text/css" href="tu-archivo-de-estilos.css" /> 
-	<!-- Reemplaza con la ruta correcta a tu archivo de estilos -->
-	<!-- También, puedes dejar aquí otros enlaces y estilos específicos para la página de Boutique -->
-    	<!-- ... (otros elementos head) ... -->
-</head>
-
-<style>
-	/* tu-archivo-de-estilos.css */
-	.centrar-carrusel {
-    	max-width: 80%; /* Ajusta según sea necesario */
-    	margin: auto;
-	}
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>85 TAZAS - SPECIALTY COFFEE MADRID</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="tu-archivo-de-estilos.css" />
+    <!-- Reemplaza con la ruta correcta a tu archivo de estilos -->
+    <!-- También, puedes dejar aquí otros enlaces y estilos específicos para la página de Boutique -->
+    <!-- ... (otros elementos head) ... -->
+    <style>
+        /* Estilos generales que aplican a todas las pantallas */
         body {
             font-family: 'Crimson Pro', serif;
             margin: 0;
@@ -38,6 +29,7 @@
             text-align: center;
             padding: 1em 0;
         }
+
         nav {
             position: absolute;
             top: 0;
@@ -53,93 +45,161 @@
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
-            transition: color 0.3s; /* Agregado efecto de transición al color del enlace */
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #D8C76F; /* Cambiado a amarillo para resaltar */
+            color: #D8C76F;
         }
 
-        /* Estilo para el h3 en el header */
-        header h3 {
-            margin: 0;
+        header {
+            position: relative;
+            background-image: url('https://raw.githubusercontent.com/85tazas/ws85/main/images/home/homefront7.jpg');
+            background-size: 65% 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: #fb6607;
+            text-align: center;
+            padding-bottom: 5px;
+            box-sizing: border-box;
         }
 
-        /* Estilo para el párrafo en el header */
+        header h3,
         header p {
-            margin: 2px 0;
+            margin: 0;
         }
 
         .redes-sociales {
             text-align: center;
             margin-top: 20px;
+            background-color: #333;
         }
 
         .redes-sociales img {
-            width: 50px;
+            width: 20px; /* Ajustado el tamaño a 20px */
+            height: 20px; /* Ajustado el tamaño a 20px */
             margin: 0 10px;
         }
 
-</style>
+        section {
+            padding: 2em;
+            text-align: center;
+            background-color: #333;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        section#ubicacion {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: #333;
+        }
+
+        section#ubicacion .mapa,
+        section#ubicacion .texto {
+            flex: 1;
+            color: #fff;
+            max-width: 100%;
+        }
+
+        section#ubicacion .horario {
+            text-align: center; /* Alineado al centro en todas las pantallas */
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            background-color: #333;
+        }
+
+        /* Estilos específicos para pantallas pequeñas (móviles) */
+        @media screen and (max-width: 768px) {
+            header {
+                background-size: 100% 100%;
+                padding: 1px;
+            }
+
+            header h3 {
+                font-size: 1.5em;
+            }
+
+            .centrar-carrusel {
+                max-width: 100%; /* Ajustado a 100% en pantallas pequeñas */
+            }
+
+            .boutique-imagen img,
+            .texto-imagen {
+                width: 100%; /* Ajustado a 100% en pantallas pequeñas */
+            }
+        }
+
+        /* Estilos para las imágenes dentro del carrusel */
+        .boutique-imagen img {
+            width: 100%; /* Ajustado a 100% para que todas las imágenes tengan el mismo tamaño */
+            height: auto; /* Mantener la proporción de aspecto */
+        }
+    </style>
+</head>
 
 <body>
-     <header>
+    <header>
         <nav>
-		<a href="home.html">Home</a> |
-            	<a href="boutique.html">Boutique</a> |
-            	<a href="#ubicacion">Ubicación</a> |
-		<a href="nuestro-cafe.html">Nuestro Café</a>|
-            	<!-- <a href="#contacto">Contacto</a> |
-		<a href="#Club85">Club85</a> | -->
+            <a href='/home'>Home</a> |
+            <a href='/boutique'>Boutique</a> |
+            <a href="#ubicacion">Ubicación</a> |
+            <a href="nuestro-cafe.html">Nuestro Café</a>
         </nav>
-        	<h3>85 TAZAS - SPECIALTY COFFEE MADRID</h3>
-        	<p>TRazabilidad: Finca Buenos Aires, La Vega, Cundinamarca,Colombia</p>
-    </header>   
+        <h3>85 TAZAS - SPECIALTY COFFEE MADRID</h3>
+        <p>TRazabilidad: Finca Buenos Aires, La Vega, Cundinamarca,Colombia</p>
+    </header>
     <section id="boutique">
-	    	<h2>NUESTRA BOUTIQUE</h2>
-	<!-- Carrusel de Imágenes -->
-        	<div class="centrar-carrusel">
-         	<div class="boutique-imagenes">
-                	<div class="boutique-imagen">
-                	<img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67166977.JPG" alt="Imagen 1">
-                </div>
-                <div class="boutique-imagen">
-                    	<img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67168769.JPG" alt="Imagen 2">
-                </div>
-		<div class="boutique-imagen">
-			<img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/IMG_0678.jpg" alt="Imagen 3">
-		</div>
-		<div class="boutique-imagen">
-			<img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/blob-88a7ab3.png" alt="Imagen 4">
-                 </div>
-		<div class="boutique-imagen">
-                         <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/PLANTA1.JPG" alt="Imagen 5">
-                 </div>
-		<div class="boutique-imagen">
-                         <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/floracion1.JPG" alt="Imagen ">
-                 </div>
-                <!-- Agrega más imágenes según sea necesario -->
+        <h2>NUESTRA BOUTIQUE</h2>
+        <!-- Carrusel de Imágenes -->
+        <div class="centrar-carrusel boutique-imagenes">
+            <div class="boutique-imagen">
+                <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67166977.JPG" alt="Imagen 1">
             </div>
+            <div class="boutique-imagen">
+                <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67168769.JPG" alt="Imagen 2">
+            </div>
+            <div class="boutique-imagen">
+                <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/IMG_0678.jpg" alt="Imagen 3">
+            </div>
+            <div class="boutique-imagen">
+                <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/blob-88a7ab3.png" alt="Imagen 4">
+            </div>
+            <div class="boutique-imagen">
+                <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/PLANTA1.JPG" alt="Imagen 5">
+            </div>
+            <div class="boutique-imagen">
+                <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/floracion1.JPG" alt="Imagen 6">
+            </div>
+            <!-- Agrega más imágenes según sea necesario -->
         </div>
 
         <!-- Carrusel de Textos -->
-        <div class="centrar-carrusel">
-            <div class="boutique-textos">
-                <div class="texto-imagen">
-                    <h3><b>Título 1</b></h3>
-                    <p>Descripción 1</p>
-                </div>
-                <div class="texto-imagen">
-                    <h3><b>Título 2</b></h3>
-                    <p>Descripción 2</p>
-                </div>
-                <!-- Agrega más textos según sea necesario -->
+        <div class="centrar-carrusel boutique-textos">
+            <div class="texto-imagen">
+                <h3><b>Título 1</b></h3>
+                <p>Descripción 1</p>
             </div>
+            <div class="texto-imagen">
+                <h3><b>Título 2</b></h3>
+                <p>Descripción 2</p>
+            </div>
+            <!-- Agrega más textos según sea necesario -->
         </div>
-
     </section>
-
-    <!-- ... (otros elementos body) ... -->
 
     <!-- Scripts de los Carruseles -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
