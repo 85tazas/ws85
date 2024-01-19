@@ -8,8 +8,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="tu-archivo-de-estilos.css" />
-    <!-- Reemplaza con la ruta correcta a tu archivo de estilos -->
-    <!-- También, puedes dejar aquí otros enlaces y estilos específicos para la página de Boutique -->
     <!-- ... (otros elementos head) ... -->
     <style>
         /* Estilos generales que aplican a todas las pantallas */
@@ -54,100 +52,44 @@
 
         header {
             position: relative;
-            background-image: url('https://raw.githubusercontent.com/85tazas/ws85/main/images/home/homefront7.jpg');
-            background-size: 65% 70%;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
+            height: 80vh; /* Ajusta según tus necesidades */
+            overflow: hidden; /* Para que las imágenes no desborden la sección */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-end;
-            color: #fb6607;
-            text-align: center;
-            padding-bottom: 5px;
-            box-sizing: border-box;
+            justify-content: center;
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        header h3,
-        header p {
-            margin: 0;
+        .header-imagenes {
+            max-width: 70%; /* Ajustado al 70% del ancho de la pantalla */
+            max-height: 85%;
+            margin: auto;
+            height: 180vh; /* Ajustado al 70% de la altura de la sección */
+            align-items: center;
         }
 
-        .redes-sociales {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #333;
-        }
-
-        .redes-sociales img {
-            width: 20px; /* Ajustado el tamaño a 20px */
-            height: 20px; /* Ajustado el tamaño a 20px */
-            margin: 0 10px;
-        }
-
-        section {
-            padding: 2em;
-            text-align: center;
-            background-color: #333;
-        }
-
-        section h2 {
-            margin-bottom: 20px;
-        }
-
-        section#ubicacion {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            background-color: #333;
-        }
-
-        section#ubicacion .mapa,
-        section#ubicacion .texto {
-            flex: 1;
-            color: #fff;
-            max-width: 100%;
-        }
-
-        section#ubicacion .horario {
-            text-align: center; /* Alineado al centro en todas las pantallas */
-            margin-top: 20px;
-        }
-
-        iframe {
+        .header-imagenes img {
             width: 100%;
-            height: 300px;
-            border: 0;
-            background-color: #333;
+            height: 100%;
+            object-fit: cover; /* Para que todas las imágenes tengan el mismo tamaño sin importar el origen */
         }
 
-        /* Estilos específicos para pantallas pequeñas (móviles) */
-        @media screen and (max-width: 768px) {
-            header {
-                background-size: 100% 100%;
-                padding: 1px;
-            }
-
-            header h3 {
-                font-size: 1.5em;
-            }
-
-            .centrar-carrusel {
-                max-width: 100%; /* Ajustado a 100% en pantallas pequeñas */
-            }
-
-            .boutique-imagen img,
-            .texto-imagen {
-                width: 100%; /* Ajustado a 100% en pantallas pequeñas */
-            }
+        .header-text-carousel {
+            position: absolute;
+            bottom: 0;
+            width: 70%; /* Ocupa el 30% del ancho de la pantalla */
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el texto */
+            color: #fff; /* Color del texto */
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
         }
 
-        /* Estilos para las imágenes dentro del carrusel */
-        .boutique-imagen img {
-            width: 100%; /* Ajustado a 100% para que todas las imágenes tengan el mismo tamaño */
-            height: auto; /* Mantener la proporción de aspecto */
-        }
+        /* ... (otros estilos) ... */
     </style>
 </head>
 
@@ -159,13 +101,8 @@
             <a href="#ubicacion">Ubicación</a> |
             <a href="nuestro-cafe.html">Nuestro Café</a>
         </nav>
-        <h3>85 TAZAS - SPECIALTY COFFEE MADRID</h3>
-        <p>TRazabilidad: Finca Buenos Aires, La Vega, Cundinamarca,Colombia</p>
-    </header>
-    <section id="boutique">
-        <h2>NUESTRA BOUTIQUE</h2>
-        <!-- Carrusel de Imágenes -->
-        <div class="centrar-carrusel boutique-imagenes">
+        
+        <div class="header-imagenes">
             <div class="boutique-imagen">
                 <img src="https://raw.githubusercontent.com/85tazas/ws85/main/images/home/image_67166977.JPG" alt="Imagen 1">
             </div>
@@ -187,27 +124,32 @@
             <!-- Agrega más imágenes según sea necesario -->
         </div>
 
-        <!-- Carrusel de Textos -->
-        <div class="centrar-carrusel boutique-textos">
-            <div class="texto-imagen">
-                <h3><b>Título 1</b></h3>
+        <div class="header-text-carousel">
+            <div>
+                <h3>Título 1</h3>
                 <p>Descripción 1</p>
             </div>
-            <div class="texto-imagen">
-                <h3><b>Título 2</b></h3>
+            <div>
+                <h3>Título 2</h3>
                 <p>Descripción 2</p>
+            </div>
+            <div>
+                <h3>Título 3</h3>
+                <p>Descripción 3</p>
             </div>
             <!-- Agrega más textos según sea necesario -->
         </div>
-    </section>
+    </header>
 
-    <!-- Scripts de los Carruseles -->
+    <!-- ... (otros elementos body) ... -->
+
+    <!-- Script de Slick Carousel -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $(document).ready(function () {
             // Carrusel de Imágenes
-            $('.boutique-imagenes').slick({
+            $('.header-imagenes').slick({
                 autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
@@ -217,8 +159,8 @@
                 cssEase: 'linear'
             });
 
-            // Carrusel de Textos
-            $('.boutique-textos').slick({
+            // Carrusel de Texto
+            $('.header-text-carousel').slick({
                 autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
