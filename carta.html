@@ -1,78 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Carta de 85 Tazas - Café de especialidad, brunch, aperitivos y más en Madrid." />
-  <title>Carta | 85 Tazas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #FDFBF7 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
-      background-size: contain;
-      color: #341F18;
-      position: relative;
-    }
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Coffee_Plant_Illustration_by_John_Smith.png') center center no-repeat;
-      background-size: 60%;
-      opacity: 0.05;
-      z-index: 0;
-    }
-    header {
-      background-color: #D8C76F;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-family: 'Playfair Display', serif;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-    nav a {
-      text-decoration: none;
-      color: #341F18;
-      font-weight: 600;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 0.5rem 1rem;
-      border-radius: 1rem;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    nav a:hover {
-      background-color: #341F18;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | 85 Tazas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #FDFBF7 url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+            background-size: contain;
+            color: #341F18;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Coffee_Plant_Illustration_by_John_Smith.png') center center no-repeat;
+            background-size: 60%;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        header {
+            background-color: #D8C76F; /* Golden yellow from your code */
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #341F18; /* Dark brown from your code */
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #341F18; /* Dark brown from your code */
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent white from your code */
+            padding: 0.5rem 1rem;
+            border-radius: 1rem; /* Rounded corners from your code */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #341F18; /* Dark brown on hover */
+            color: #fff;
+        }
+
+        /* Hero Section for Image and Text */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            max-height: 70vh; /* Limit height for better viewing on smaller screens */
+            overflow: hidden;
+            display: flex; /* Use flexbox for centering image content */
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Space below header */
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            min-height: 250px; /* Minimum height for mobile */
+        }
+        .hero-text {
+            position: absolute;
+            color: white; /* Text color for readability over image */
+            text-align: center;
+            font-size: 2.5em; /* Larger font for impact */
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            background-color: rgba(52, 31, 24, 0.6); /* Dark brown semi-transparent background */
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .hero-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6em; /* Smaller for sub-text */
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .navbar a {
+                padding: 0.3rem 0.8rem;
+                font-size: 1em;
+            }
+            .hero-text {
+                font-size: 1.8em;
+                padding: 15px 20px;
+            }
+            .hero-text p {
+                font-size: 0.7em;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 1.4em;
+                padding: 10px 15px;
+            }
+            .hero-text p {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>85 Tazas · Nuestra Carta</h1>
-    <nav>
-      <a href="cafes.html">Cafés</a>
-      <a href="carta.html">Carta</a>
-      <a href="brunch.html">Brunch <small>(Sábados y Domingos)</small></a>
-      <a href="aperitivos.html">Aperitivos <small>(11:00–14:00)</small></a>
-    </nav>
-  </header>
+    <header>
+        <h1>85 Tazas · Nuestra Carta</h1>
+        <nav class="navbar">
+            <a href="cartacafe.html">Café</a>
+            <a href="cartadesayunos.html">Desayunos</a>
+            <a href="brunch.html">Brunch</a>
+            <a href="cartameriendas.html">Meriendas</a>
+            <a href="cartaaperitivos.html">Aperitivos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <img src="https://github.com/85tazas/ws85/blob/main/images/home/con%20jv.pdf" alt="Acompañados de Juan Valdez" class="hero-image">
+            <div class="hero-text">
+                <h2>Proveniente de nuestra finca en Colombia. Realizamos todo el proceso desde la planta a la taza para que nuestros clientes gocen de un café con garantía de calidad y trazabilidad</h2>
+                <p>Tu momento perfecto, siempre en 85 Tazas.</p>
+            </div>
+        </section>
+
+        </main>
 </body>
 </html>
